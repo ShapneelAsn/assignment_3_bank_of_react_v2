@@ -23,10 +23,25 @@ const Debits = (props) => {
       {debitsView()}
 
       <form onSubmit={props.addDebit}>
-        <input type="text" name="description" />
-        <input type="number" name="amount" />
+        <div>
+          <label>
+            Description:
+            <input type="text" name="description" placeholder="" required />
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Amount:
+            <input type="number" name="amount" placeholder="" step="0.01" required />
+          </label>
+        </div>
+
         <button type="submit">Add Debit</button>
       </form>
+      <br />
+      <div>Account Balance: ${props.accountBalance.toFixed(2)}</div>
+      <br />
       <br/>
       <Link to="/">Return to Home</Link>
     </div>

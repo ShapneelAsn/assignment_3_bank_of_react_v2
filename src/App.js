@@ -34,6 +34,85 @@ class App extends Component {
     newUser.userName = logInInfo.userName;
     this.setState({currentUser: newUser})
   }
+  // DEBIT IMPLEMENTATION SECTION
+  // Fetch debits
+  componentDidMount() {
+    fetch("https://moj-api.herokuapp.com/debits")
+      .then(response => response.json())
+      .then(data => this.setState({ debitList: data }))
+      .catch(err => console.error("Failed to fetch debits", err));
+  
+    fetch("https://moj-api.herokuapp.com/credits")
+      .then(response => response.json())
+      .then(data => this.setState({ creditList: data }))
+      .catch(err => console.error("Failed to fetch credits", err));
+  }
+
+  addDebit = (event) => {
+    event.preventDefault();
+    const description = event.target.description.value;
+    const amount = parseFloat(event.target.amount.value);
+    const newDebit = {
+      id: Math.random().toString(), // fake ID
+      description: description,
+      amount: amount,
+      date: new Date().toISOString()
+    };
+  
+    const updatedDebits = [...this.state.debitList, newDebit];
+    const updatedBalance = this.state.accountBalance - amount;
+  
+    this.setState({
+      debitList: updatedDebits,
+      accountBalance: updatedBalance
+    });
+  
+    event.target.reset(); // optional: clear form
+  };
+
+  addDebit = (event) => {
+    event.preventDefault();
+    const description = event.target.description.value;
+    const amount = parseFloat(event.target.amount.value);
+    const newDebit = {
+      id: Math.random().toString(),
+      description: description,
+      amount: amount,
+      date: new Date().toISOString()
+    };
+  
+    const updatedDebits = [...this.state.debitList, newDebit];
+    const updatedBalance = this.state.accountBalance - amount;
+  
+    this.setState({
+      debitList: updatedDebits,
+      accountBalance: updatedBalance
+    });
+  
+    event.target.reset();
+  }
+
+  addCredit = (event) => {
+    event.preventDefault();
+    const description = event.target.description.value;
+    const amount = parseFloat(event.target.amount.value);
+    const newCredit = {
+      id: Math.random().toString(),
+      description: description,
+      amount: amount,
+      date: new Date().toISOString()
+    };
+  
+    const updatedCredits = [...this.state.creditList, newCredit];
+    const updatedBalance = this.state.accountBalance + amount;
+  
+    this.setState({
+      creditList: updatedCredits,
+      accountBalance: updatedBalance
+    });
+  
+    event.target.reset();
+  }
 
   // Create Routes and React elements to be rendered using React components
   render() {  
@@ -43,8 +122,19 @@ class App extends Component {
       <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince} />
     )
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />)
-    const CreditsComponent = () => (<Credits credits={this.state.creditList} />) 
-    const DebitsComponent = () => (<Debits debits={this.state.debitList} />) 
+    const CreditsComponent = () => (
+    <Credits
+      credits={this.state.creditList}
+      addCredit={this.addCredit}
+      accountBalance={this.state.accountBalance}
+    />) 
+    const DebitsComponent = () => (
+      <Debits 
+        debits={this.state.debitList}
+        addDebit={this.addDebit}
+        accountBalance={this.state.accountBalance}
+      />
+    );
 
     // Important: Include the "basename" in Router, which is needed for deploying the React app to GitHub Pages
     return (
