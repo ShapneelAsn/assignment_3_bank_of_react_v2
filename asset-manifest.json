@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/bank-of-react-starter-code/static/css/main.8287159a.chunk.css",
-    "main.js": "/bank-of-react-starter-code/static/js/main.1f815401.chunk.js",
-    "main.js.map": "/bank-of-react-starter-code/static/js/main.1f815401.chunk.js.map",
-    "runtime-main.js": "/bank-of-react-starter-code/static/js/runtime-main.14cc104a.js",
-    "runtime-main.js.map": "/bank-of-react-starter-code/static/js/runtime-main.14cc104a.js.map",
-    "static/js/2.dfb18895.chunk.js": "/bank-of-react-starter-code/static/js/2.dfb18895.chunk.js",
-    "static/js/2.dfb18895.chunk.js.map": "/bank-of-react-starter-code/static/js/2.dfb18895.chunk.js.map",
-    "static/js/3.1e76f534.chunk.js": "/bank-of-react-starter-code/static/js/3.1e76f534.chunk.js",
-    "static/js/3.1e76f534.chunk.js.map": "/bank-of-react-starter-code/static/js/3.1e76f534.chunk.js.map",
-    "index.html": "/bank-of-react-starter-code/index.html",
-    "static/css/main.8287159a.chunk.css.map": "/bank-of-react-starter-code/static/css/main.8287159a.chunk.css.map",
-    "static/js/2.dfb18895.chunk.js.LICENSE.txt": "/bank-of-react-starter-code/static/js/2.dfb18895.chunk.js.LICENSE.txt"
+    "main.css": "/assignment_3_bank_of_react_v2/static/css/main.8287159a.chunk.css",
+    "main.js": "/assignment_3_bank_of_react_v2/static/js/main.3d148aee.chunk.js",
+    "main.js.map": "/assignment_3_bank_of_react_v2/static/js/main.3d148aee.chunk.js.map",
+    "runtime-main.js": "/assignment_3_bank_of_react_v2/static/js/runtime-main.7c962860.js",
+    "runtime-main.js.map": "/assignment_3_bank_of_react_v2/static/js/runtime-main.7c962860.js.map",
+    "static/js/2.87af0de0.chunk.js": "/assignment_3_bank_of_react_v2/static/js/2.87af0de0.chunk.js",
+    "static/js/2.87af0de0.chunk.js.map": "/assignment_3_bank_of_react_v2/static/js/2.87af0de0.chunk.js.map",
+    "static/js/3.c85fb425.chunk.js": "/assignment_3_bank_of_react_v2/static/js/3.c85fb425.chunk.js",
+    "static/js/3.c85fb425.chunk.js.map": "/assignment_3_bank_of_react_v2/static/js/3.c85fb425.chunk.js.map",
+    "index.html": "/assignment_3_bank_of_react_v2/index.html",
+    "static/css/main.8287159a.chunk.css.map": "/assignment_3_bank_of_react_v2/static/css/main.8287159a.chunk.css.map",
+    "static/js/2.87af0de0.chunk.js.LICENSE.txt": "/assignment_3_bank_of_react_v2/static/js/2.87af0de0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.14cc104a.js",
-    "static/js/2.dfb18895.chunk.js",
+    "static/js/runtime-main.7c962860.js",
+    "static/js/2.87af0de0.chunk.js",
     "static/css/main.8287159a.chunk.css",
-    "static/js/main.1f815401.chunk.js"
+    "static/js/main.3d148aee.chunk.js"
   ]
 }
